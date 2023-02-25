@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  /* font-family: "Inter", sans-serif; */
+
+  font-size: 62.5%;
+}
+body {
+  font-family: "Microsoft JhengHei", sans-serif;
+  font-weight: 400;
+  background-color: #f9f5f1;
+}
+/*
+header
+display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #f9f5f1;
+
+  height: 9.6rem;
+  padding: 0 4.8rem;
+  position: relative;*/
+.nav {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4.8rem;
+  background-color: #f9f5f1;
+  height: 9.6rem;
+  font-weight: 700;
+}
+nav li {
+  list-style: none;
+  display: inline-block;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+nav li span {
+  padding-left: 5px;
+}
+
+/* li a {
+  padding: 5px;
+  background-color: #fff;
+  text-decoration: none;
+  color: #171616;
+} */
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+  align-items: center;
+}
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+
+  text-decoration: none;
+  color: #121212;
+  font-size: 1.8rem;
+  font-weight: 600;
+  transition: all 0.5s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #c9731e;
+  box-shadow: 0 5px 12px 12px #ede6e67c;
+}
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 16;
+}
+.logo-cart {
+  padding: 1.2rem;
+}
+.logo {
+  height: 2.2rem;
+}
+.cart-main {
+  display: flex;
+  /* margin-top: 200px; */
+  margin: 200px auto;
+  /* width: 1600px; */
+  background-color: #f9f5f1;
+  font-weight: 600;
+}
+
+.sidebar {
+  /* top: 217px; */
+  left: 50px;
+  /* margin-top: 50px; */
+  width: 200px;
+  padding: 0.24rem 1.25rem;
+  text-align: center;
+  /* width: 10%; */
+  /* background-color: #c97214; */
+  border-radius: 5px;
+  position: fixed;
+  font-size: 2em;
+  /* height: 100%; */
+  /* margin-top: 55px; */
+  /* position: fixed; */
+  /* z-index: 1; */
+}
+.cart-bus {
+  margin-left: 300px;
+  /* margin-top: 150px; */
+
+  /* margin: 100px auto; */
+  width: 1500px;
+  display: flex;
+  flex-wrap: wrap;
+  /* left: 100px; */
+}
+.sidebar-top {
+  background-color: #c97214;
+  font-weight: 700;
+}
+.sidebar a {
+  display: block;
+  color: rgb(0, 0, 0);
+  padding: 16px;
+
+  text-decoration: none;
+}
+
+.sidebar a:active {
+  background-color: #293631;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #000000;
+  color: white;
+}
+
+/*單一食物*/
+.column {
+  max-width: 20%;
+  margin-bottom: 16px;
+  padding: 0 1.2rem;
+  /* height: 25%; */
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  gap: 1.2rem;
+  flex-direction: column;
+  background-color: #171616;
+  color: #f9f5f1;
+}
+
+.card img {
+  width: 100%;
+}
+
+.cart2 {
+  display: inline-block;
+  padding: 8px;
+  text-align: center;
+  background-color: #c97214;
+  color: #f9f5f1;
+  width: 100%;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.container-cart {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 8px;
+  font-size: 0.8rem;
+}
+.container-cart .salad {
+  background-color: #e72204;
+  width: 15%;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.container-cart .meal {
+  background-color: #00fe00;
+  width: 15%;
+  border-radius: 5px;
+  text-align: center;
+}
