@@ -1,13 +1,15 @@
-* {
+/* * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-
+*/
 html {
   font-size: 62.5%;
   /* overflow-x: hidden; */
-  /* scroll-behavior: smooth; */
+
+  scroll-behavior: smooth;
+  /* position: relative; */
 }
 .tag {
   display: inline-block;
@@ -110,27 +112,25 @@ html {
 }
 
 .demo1 {
-  /* background-color: #c97214; */
-  /* width: 100%; */
   display: flex;
   gap: 1rem;
   margin-right: 1rem;
+  /* overflow-x: hidden; */
 }
 .demo {
   width: 80%;
-  overflow-y: visible;
   padding: 3.2rem 0;
-  overflow-x: hidden;
-  /* overflow-y: auto; */
+  overflow: hidden;
+  /* overflow-x: hidden; */
   margin: 3.2rem auto;
   display: flex;
   background-color: rgb(249, 245, 241);
-  /* width: 800px; */
-  /* border: #333 solid 2px; */
+
   box-shadow: 0 0.8rem 3.2rem rgba(0, 0, 0, 0.5);
   border-radius: 20px;
 }
 .demo2 {
   display: flex;
   gap: 1rem;
+  /* overflow-x: hidden; */
 }
