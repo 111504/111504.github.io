@@ -5,7 +5,7 @@
 }
 html {
   /* font-family: "Inter", sans-serif; */
-
+  background-color: #f9f5f1;
   font-size: 62.5%;
 }
 body {
@@ -100,10 +100,10 @@ nav li span {
   left: 50px;
   /* margin-top: 50px; */
   width: 200px;
-  padding: 0.24rem 1.25rem;
+  /* padding: 0.24rem 1.25rem; */
   text-align: center;
   /* width: 10%; */
-  /* background-color: #c97214; */
+  background-color: #daba98;
   border-radius: 5px;
   position: fixed;
   font-size: 2em;
@@ -125,6 +125,8 @@ nav li span {
 .sidebar-top {
   background-color: #c97214;
   font-weight: 700;
+  padding: 0;
+  width: 100%;
 }
 .sidebar a {
   display: block;
@@ -149,7 +151,7 @@ nav li span {
   max-width: 20%;
   margin-bottom: 16px;
   padding: 0 1.2rem;
-  /* height: 25%; */
+  /* height: 500px; */
 }
 
 .card {
@@ -159,10 +161,14 @@ nav li span {
   flex-direction: column;
   background-color: #171616;
   color: #f9f5f1;
+  /* padding-bottom: 100%; */
+  width: 100%;
 }
 
 .card img {
-  width: 100%;
+  width: auto;
+  height: 250px;
+  /* z-index: 1; */
 }
 
 .cart2 {
@@ -181,16 +187,37 @@ nav li span {
   gap: 0.8rem;
   padding: 8px;
   font-size: 0.8rem;
+  /* z-index: 2; */
 }
-.container-cart .salad {
+.container-cart .steak {
   background-color: #e72204;
   width: 15%;
   border-radius: 5px;
   text-align: center;
 }
 
-.container-cart .meal {
+.container-cart .salad {
   background-color: #00fe00;
+  width: 15%;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.container-cart .pasta {
+  background-color: #8b5305;
+  width: 25%;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.container-cart .juice {
+  background-color: #b836b4;
+  width: 15%;
+  border-radius: 5px;
+  text-align: center;
+}
+.container-cart .cake {
+  background-color: #dc3a57;
   width: 15%;
   border-radius: 5px;
   text-align: center;
