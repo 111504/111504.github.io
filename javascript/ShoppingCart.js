@@ -9,31 +9,122 @@ $(document).ready(function () {
 
   let products = [
     {
-      name: "Fish Fry",
-      tag: "Fishfry",
-      img: "picture/Fishfry.jpg",
-      price: 20,
+      name: "義式乳酪番茄沙拉",
+      tag: "salad-1",
+      img: "picture/salad-1.jpg",
+      price: 60,
       inCart: 0,
     },
     {
-      name: "Noodles",
-      tag: "noodles",
-      img: "picture/frideRice.jpg",
+      name: "糖心蛋麵包丁沙拉",
+      tag: "salad-2",
+      img: "picture/salad-2.jpg",
       price: 40,
       inCart: 0,
     },
     {
-      name: "Panneer Noodles",
-      tag: "paneerNoodle",
-      img: "picture/noodles.jpg",
+      name: "起司生菜沙拉",
+      tag: "salad-3",
+      img: "picture/salad-3.jpg",
       price: 50,
       inCart: 0,
     },
     {
-      name: "Fish Rice",
-      tag: "frideRice",
+      name: "草莓薄荷佐核桃沙拉",
+      tag: "salad-4",
+      img: "picture/noodles.jpg",
+      price: 45,
+      inCart: 0,
+    },
+    {
+      name: "活力滿滿沙拉",
+      tag: "salad-5",
+      img: "picture/noodles.jpg",
+      price: 55,
+      inCart: 0,
+    },
+    {
+      name: "主廚推薦牛肋排",
+      tag: "steak",
+      img: "picture/noodles.jpg",
+      price: 250,
+      inCart: 0,
+    },
+    {
+      name: "迷迭香牛排佐馬鈴薯",
+      tag: "steak-2",
       img: "picture/paneerNoodle.jpg",
       price: 200,
+      inCart: 0,
+    },
+    {
+      name: "嫩肩法式羊小排",
+      tag: "steak-3",
+      img: "picture/paneerNoodle.jpg",
+      price: 230,
+      inCart: 0,
+    },
+    {
+      name: "香煎櫻桃鴨",
+      tag: "steak-4",
+      img: "picture/paneerNoodle.jpg",
+      price: 350,
+      inCart: 0,
+    },
+    {
+      name: "迷迭香烤羊肋",
+      tag: "steak-5",
+      img: "picture/paneerNoodle.jpg",
+      price: 400,
+      inCart: 0,
+    },
+    {
+      name: "焗烤通心義大利麵",
+      tag: "pasta-2",
+      img: "picture/paneerNoodle.jpg",
+      price: 380,
+      inCart: 0,
+    },
+    {
+      name: "奶油白醬義大利麵",
+      tag: "pasta-5",
+      img: "picture/paneerNoodle.jpg",
+      price: 270,
+      inCart: 0,
+    },
+    {
+      name: "芒果氣泡飲",
+      tag: "juice",
+      img: "picture/paneerNoodle.jpg",
+      price: 60,
+      inCart: 0,
+    },
+    {
+      name: "橘子薄荷氣泡飲",
+      tag: "juice-2",
+      img: "picture/paneerNoodle.jpg",
+      price: 45,
+      inCart: 0,
+    },
+    {
+      name: "覆盆子蔓越莓奶昔",
+      tag: "juice-3",
+      img: "picture/paneerNoodle.jpg",
+      price: 30,
+      inCart: 0,
+    },
+    {
+      name: "白巧克力慕斯",
+      tag: "cake-2",
+      img: "picture/paneerNoodle.jpg",
+      price: 40,
+      inCart: 0,
+    },
+    {
+      name: "覆盆子檸檬塔",
+      tag: "cake-3",
+      img: "picture/paneerNoodle.jpg",
+      price: 35,
       inCart: 0,
     },
   ];
@@ -41,17 +132,33 @@ $(document).ready(function () {
   for (let i = 0; i < cars.length; i++) {
     cars[i].addEventListener("click", (e) => {
       e.preventDefault();
+
       // console.log("add to cart");
       cartNumbers(products[i]);
       totalCost(products[i]);
+      tempAlert("成功添加", 1500);
     });
+  }
+  function tempAlert(msg, duration) {
+    // alert("test");
+    var el = document.createElement("div");
+    // alert("成功");
+    el.setAttribute(
+      "style",
+      "display:flex;justify-content: center;align-items: center;color:black;opacity:0.8;background-color:#c9731e;height:50px;width:200px;z-index: 999999;position: fixed;right: 20%;top: 5%;font-size:2.4rem;"
+    );
+    el.innerHTML = msg;
+    setTimeout(function () {
+      el.parentNode.removeChild(el);
+    }, duration);
+    document.body.appendChild(el);
   }
   function onLoadCartNumbers() {
     let productNumbers = localStorage.getItem("cartNumbers");
 
-    if (productNumbers) {
-      document.querySelector(".cart span").innerHTML = productNumbers;
-    }
+    // if (productNumbers) {
+    //   document.querySelector(".cart span").innerHTML = productNumbers;
+    // }
   }
 
   function cartNumbers(product) {

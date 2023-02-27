@@ -11,24 +11,26 @@ html {
   scroll-behavior: smooth;
   /* position: relative; */
 }
-.tag {
-  display: inline-block;
-  padding: 0.4rem 0.8rem;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  background-color: #51cf66;
-  border-radius: 100px;
-}
 
-.tag--vegetarian {
+.tag--salad {
   background-color: #51cf66;
 }
-
+.tag--steak {
+  background-color: #bd052d;
+}
 .tag--Vegan {
   background-color: #94d82d;
 }
-.tag--Paleo {
-  background-color: #e8e7e4;
+.tag--juice {
+  background-color: #ba3fca;
+}
+.tag {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: aliceblue;
+  border-radius: 100px;
 }
 .meal {
   opacity: 0.8;
@@ -121,6 +123,7 @@ html {
   width: 80%;
   padding: 3.2rem 0;
   overflow: hidden;
+  position: relative;
   /* overflow-x: hidden; */
   margin: 3.2rem auto;
   display: flex;
