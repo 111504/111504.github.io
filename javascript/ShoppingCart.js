@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  // document.getElementById("defaultOpen").click();
   let cars = document.querySelectorAll(".add-cart");
   /*
    *設定cartNumbers  代表購物車商品的數量
@@ -132,7 +133,277 @@ $(document).ready(function () {
   for (let i = 0; i < cars.length; i++) {
     cars[i].addEventListener("click", (e) => {
       e.preventDefault();
-
+      alert("ckeck123");
+      let pageNumbers = localStorage.getItem("PageNumbers");
+      pageNumbers = parseInt(pageNumbers);
+      switch (pageNumbers) {
+        case 1: {
+          // whichPage = 1;
+          console.log("page 1");
+          products = [
+            {
+              name: "義式乳酪番茄沙拉",
+              tag: "salad-1",
+              img: "picture/salad-1.jpg",
+              price: 60,
+              inCart: 0,
+            },
+            {
+              name: "糖心蛋麵包丁沙拉",
+              tag: "salad-2",
+              img: "picture/salad-2.jpg",
+              price: 40,
+              inCart: 0,
+            },
+            {
+              name: "起司生菜沙拉",
+              tag: "salad-3",
+              img: "picture/salad-3.jpg",
+              price: 50,
+              inCart: 0,
+            },
+            {
+              name: "草莓薄荷佐核桃沙拉",
+              tag: "salad-4",
+              img: "picture/noodles.jpg",
+              price: 45,
+              inCart: 0,
+            },
+            {
+              name: "活力滿滿沙拉",
+              tag: "salad-5",
+              img: "picture/noodles.jpg",
+              price: 55,
+              inCart: 0,
+            },
+            {
+              name: "主廚推薦牛肋排",
+              tag: "steak",
+              img: "picture/noodles.jpg",
+              price: 250,
+              inCart: 0,
+            },
+            {
+              name: "迷迭香牛排佐馬鈴薯",
+              tag: "steak-2",
+              img: "picture/paneerNoodle.jpg",
+              price: 200,
+              inCart: 0,
+            },
+            {
+              name: "嫩肩法式羊小排",
+              tag: "steak-3",
+              img: "picture/paneerNoodle.jpg",
+              price: 230,
+              inCart: 0,
+            },
+            {
+              name: "香煎櫻桃鴨",
+              tag: "steak-4",
+              img: "picture/paneerNoodle.jpg",
+              price: 350,
+              inCart: 0,
+            },
+            {
+              name: "迷迭香烤羊肋",
+              tag: "steak-5",
+              img: "picture/paneerNoodle.jpg",
+              price: 400,
+              inCart: 0,
+            },
+            {
+              name: "焗烤通心義大利麵",
+              tag: "pasta-2",
+              img: "picture/paneerNoodle.jpg",
+              price: 380,
+              inCart: 0,
+            },
+            {
+              name: "奶油白醬義大利麵",
+              tag: "pasta-5",
+              img: "picture/paneerNoodle.jpg",
+              price: 270,
+              inCart: 0,
+            },
+            {
+              name: "芒果氣泡飲",
+              tag: "juice",
+              img: "picture/paneerNoodle.jpg",
+              price: 60,
+              inCart: 0,
+            },
+            {
+              name: "橘子薄荷氣泡飲",
+              tag: "juice-2",
+              img: "picture/paneerNoodle.jpg",
+              price: 45,
+              inCart: 0,
+            },
+            {
+              name: "覆盆子蔓越莓奶昔",
+              tag: "juice-3",
+              img: "picture/paneerNoodle.jpg",
+              price: 30,
+              inCart: 0,
+            },
+            {
+              name: "白巧克力慕斯",
+              tag: "cake-2",
+              img: "picture/paneerNoodle.jpg",
+              price: 40,
+              inCart: 0,
+            },
+            {
+              name: "覆盆子檸檬塔",
+              tag: "cake-3",
+              img: "picture/paneerNoodle.jpg",
+              price: 35,
+              inCart: 0,
+            },
+          ];
+          break;
+        }
+        case 2: {
+          // whichPage = 2;
+          console.log("page 2");
+          products = [
+            {
+              name: "義式乳酪番茄沙拉",
+              tag: "salad-1",
+              img: "picture/salad-1.jpg",
+              price: 60,
+              inCart: 0,
+            },
+            {
+              name: "糖心蛋麵包丁沙拉",
+              tag: "salad-2",
+              img: "picture/salad-2.jpg",
+              price: 40,
+              inCart: 0,
+            },
+            {
+              name: "起司生菜沙拉",
+              tag: "salad-3",
+              img: "picture/salad-3.jpg",
+              price: 50,
+              inCart: 0,
+            },
+            {
+              name: "草莓薄荷佐核桃沙拉",
+              tag: "salad-4",
+              img: "picture/noodles.jpg",
+              price: 45,
+              inCart: 0,
+            },
+            {
+              name: "活力滿滿沙拉",
+              tag: "salad-5",
+              img: "picture/noodles.jpg",
+              price: 55,
+              inCart: 0,
+            },
+          ];
+          break;
+        }
+        case 3: {
+          // whichPage = 3;
+          console.log("page 3");
+          products = [
+            {
+              name: "主廚推薦牛肋排",
+              tag: "steak",
+              img: "picture/noodles.jpg",
+              price: 250,
+              inCart: 0,
+            },
+            {
+              name: "迷迭香牛排佐馬鈴薯",
+              tag: "steak-2",
+              img: "picture/paneerNoodle.jpg",
+              price: 200,
+              inCart: 0,
+            },
+            {
+              name: "嫩肩法式羊小排",
+              tag: "steak-3",
+              img: "picture/paneerNoodle.jpg",
+              price: 230,
+              inCart: 0,
+            },
+            {
+              name: "香煎櫻桃鴨",
+              tag: "steak-4",
+              img: "picture/paneerNoodle.jpg",
+              price: 350,
+              inCart: 0,
+            },
+            {
+              name: "迷迭香烤羊肋",
+              tag: "steak-5",
+              img: "picture/paneerNoodle.jpg",
+              price: 400,
+              inCart: 0,
+            },
+            {
+              name: "焗烤通心義大利麵",
+              tag: "pasta-2",
+              img: "picture/paneerNoodle.jpg",
+              price: 380,
+              inCart: 0,
+            },
+            {
+              name: "奶油白醬義大利麵",
+              tag: "pasta-5",
+              img: "picture/paneerNoodle.jpg",
+              price: 270,
+              inCart: 0,
+            },
+          ];
+          break;
+        }
+        case 4: {
+          // whichPage = 4;
+          console.log("page 4");
+          products = [
+            {
+              name: "芒果氣泡飲",
+              tag: "juice",
+              img: "picture/paneerNoodle.jpg",
+              price: 60,
+              inCart: 0,
+            },
+            {
+              name: "橘子薄荷氣泡飲",
+              tag: "juice-2",
+              img: "picture/paneerNoodle.jpg",
+              price: 45,
+              inCart: 0,
+            },
+            {
+              name: "覆盆子蔓越莓奶昔",
+              tag: "juice-3",
+              img: "picture/paneerNoodle.jpg",
+              price: 30,
+              inCart: 0,
+            },
+            {
+              name: "白巧克力慕斯",
+              tag: "cake-2",
+              img: "picture/paneerNoodle.jpg",
+              price: 40,
+              inCart: 0,
+            },
+            {
+              name: "覆盆子檸檬塔",
+              tag: "cake-3",
+              img: "picture/paneerNoodle.jpg",
+              price: 35,
+              inCart: 0,
+            },
+          ];
+          break;
+        }
+      }
       // console.log("add to cart");
       cartNumbers(products[i]);
       totalCost(products[i]);
@@ -214,20 +485,21 @@ $(document).ready(function () {
   function displayCart() {
     let cartItems = localStorage.getItem("productsInCart");
     let totalprice = localStorage.getItem("cart-total-price");
+    console.log(cartItems);
     cartItems = JSON.parse(cartItems);
+
     let productContainer = document.querySelector(".cart-items");
 
     if (cartItems && productContainer) {
       productContainer.innerHTML = "";
       Object.values(cartItems).map((item) => {
-        // console.log(item.price);
         // console.log(item.inCart);
         // let total_price = item.price * item.inCart;
         // console.log("total_price" + total_price);
         productContainer.innerHTML += `
         <div class="cart-total">
             <div class="cart-item cart-column">
-            <img class="cart-item-image" src="./picture/${
+            <img class="cart-item-image" src="picture/${
               item.tag
             }.jpg" width="100" height="100">
             <span class="cart-item-title">${item.name}</span>
@@ -303,6 +575,7 @@ $(document).ready(function () {
       TotalPriceOfCarts;
     console.log(TotalPriceOfCarts);
   }
+
   onLoadCartNumbers();
   displayCart();
 });

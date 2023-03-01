@@ -123,26 +123,37 @@ nav li span {
   flex-wrap: wrap;
   /* left: 100px; */
 }
+.sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+.siber-page {
+  font-weight: 700;
+}
 .sidebar-top {
   background-color: #c97214;
   font-weight: 700;
   padding: 0;
   width: 100%;
 }
-.sidebar a {
+.sidebar button {
   display: block;
   color: rgb(0, 0, 0);
   padding: 16px;
-
   text-decoration: none;
 }
 
-.sidebar a:active {
+.sidebar button:active {
   background-color: #293631;
   color: white;
 }
+/* .sidebar button.active {
+  background-color: #22986b;
+  color: white;
+} */
 
-.sidebar a:hover:not(.active) {
+.sidebar button:hover:not(.active) {
   background-color: #000000;
   color: white;
 }

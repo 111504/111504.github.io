@@ -26,9 +26,10 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> -->
-    <script src="jquery/jquery-3.6.3.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <!-- <script src="jquery/jquery-3.6.3.js"></script> -->
     <script src="javascript/ShoppingCart.js"></script>
+    <script src="javascript/ChangePage.js"></script>
 
     <title>shopping-cart</title>
   </head>
@@ -55,12 +56,25 @@
     <main>
       <div class="cart-main">
         <div class="sidebar">
-          <a class="sidebar-top" href="#">全部商品</a>
-          <a href="#">新鮮沙拉</a>
-          <a href="#">主廚推薦</a>
-          <a href="#">飯後甜點</a>
+          <button
+            class="sidebar-top siber-page"
+            id="defaultOpen"
+            onclick="openPage(event,'FirstPage',1)"
+          >
+            全部商品
+          </button>
+          <button class="siber-page" onclick="openPage(event,'SecondPage',2)">
+            新鮮沙拉
+          </button>
+          <button class="siber-page" onclick="openPage(event,'ThirdPage',3)">
+            主廚推薦
+          </button>
+          <button class="siber-page" onclick="openPage(event,'FoursPage',4)">
+            飯後甜點
+          </button>
         </div>
-        <div class="cart-bus">
+
+        <div id="FirstPage" class="cart-bus">
           <div class="column">
             <div class="card">
               <img src="/picture/salad-1.jpg" alt="Jane" />
@@ -335,7 +349,290 @@
             </div>
           </div>
         </div>
+
+        <div id="SecondPage" class="cart-bus">
+          <div class="column">
+            <div class="card">
+              <img src="/picture/salad-1.jpg" alt="Jane" />
+              <div class="container-cart">
+                <h2 class="salad">沙拉</h2>
+                <h3 class="title">/義式乳酪番茄沙拉/</h3>
+
+                <h3>/$60/</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+                <a href="#" class="add-cart cart2">加入購物車</a>
+                <input type="hidden" value="120" />
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <img src="/picture/salad-2.jpg" alt="Jane" />
+              <div class="container-cart">
+                <h2 class="salad">沙拉</h2>
+                <h3 class="title">/糖心蛋麵包丁沙拉/</h3>
+
+                <h3>/$40/-</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+                <a href="#" class="add-cart cart2">加入購物車</a>
+                <input type="hidden" value="120" />
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <img src="/picture/salad-3.jpg" alt="Jane" />
+              <div class="container-cart">
+                <h2 class="salad">沙拉</h2>
+                <h3 class="title">/起司生菜沙拉/</h3>
+
+                <h3>/$50/-</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+                <a href="#" class="add-cart cart2">加入購物車</a>
+                <input type="hidden" value="120" />
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <img src="/picture/salad-4.jpg" alt="Jane" />
+              <div class="container-cart">
+                <h2 class="salad">沙拉</h2>
+                <h3 class="title">/草莓薄荷佐核桃沙拉/</h3>
+
+                <h3>/$45/-</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+                <a href="#" class="add-cart cart2">加入購物車</a>
+                <input type="hidden" value="120" />
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <img src="/picture/salad-5.jpg" alt="Jane" />
+              <div class="container-cart">
+                <h2 class="salad">沙拉</h2>
+                <h3 class="title">/活力滿滿沙拉/</h3>
+
+                <h3>/$55/-</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+                <a href="#" class="add-cart cart2">加入購物車</a>
+                <input type="hidden" value="120" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="ThirdPage" class="cart-bus">
+          <div class="column">
+            <div class="card">
+              <img src="/picture/steak.jpg" alt="Jane" />
+              <div class="container-cart">
+                <h2 class="steak">主餐</h2>
+                <h3 class="title">/主廚推薦牛肋排/</h3>
+
+                <h3>/$250/</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+                <a href="#" class="add-cart cart2">加入購物車</a>
+                <input type="hidden" value="120" />
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <img src="/picture/steak-2.jpg" alt="Jane" />
+              <div class="container-cart">
+                <h2 class="steak">主餐</h2>
+                <h3 class="title">/迷迭香牛排佐馬鈴薯/</h3>
+
+                <h3>/$200/-</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+                <a href="#" class="add-cart cart2">加入購物車</a>
+                <input type="hidden" value="120" />
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <img src="/picture/steak-3.jpg" alt="Jane" />
+              <div class="container-cart">
+                <h2 class="steak">主餐</h2>
+                <h3 class="title">/嫩肩法式羊小排/</h3>
+
+                <h3>/$230/-</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+                <a href="#" class="add-cart cart2">加入購物車</a>
+                <input type="hidden" value="120" />
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <img src="/picture/steak-4.jpg" alt="Jane" />
+              <div class="container-cart">
+                <h2 class="steak">主餐</h2>
+                <h3 class="title">/香煎櫻桃鴨/</h3>
+
+                <h3>/$350/-</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+                <a href="#" class="add-cart cart2">加入購物車</a>
+                <input type="hidden" value="120" />
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <img src="/picture/steak-5.jpg" alt="Jane" />
+              <div class="container-cart">
+                <h2 class="steak">主餐</h2>
+                <h3 class="title">/迷迭香烤羊肋/</h3>
+
+                <h3>/$400/-</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+                <a href="#" class="add-cart cart2">加入購物車</a>
+                <input type="hidden" value="120" />
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <img src="/picture/pasta-2.jpg" alt="Jane" />
+              <div class="container-cart">
+                <h2 class="pasta">義大利麵</h2>
+                <h3 class="title">/焗烤通心義大利麵/</h3>
+
+                <h3>/$380/</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+                <a href="#" class="add-cart cart2">加入購物車</a>
+                <input type="hidden" value="120" />
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <img src="/picture/pasta-5.jpg" alt="Jane" />
+              <div class="container-cart">
+                <h2 class="pasta">義大利麵</h2>
+                <h3 class="title">/奶油白醬義大利麵/</h3>
+
+                <h3>/$270/-</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+                <a href="#" class="add-cart cart2">加入購物車</a>
+                <input type="hidden" value="120" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="FoursPage" class="cart-bus">
+          <div class="column">
+            <div class="card">
+              <img src="/picture/juice.jpg" alt="Jane" />
+              <div class="container-cart">
+                <h2 class="juice">飲料</h2>
+                <h3 class="title">/芒果氣泡飲/</h3>
+
+                <h3>/$60/-</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+                <a href="#" class="add-cart cart2">加入購物車</a>
+                <input type="hidden" value="120" />
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <img src="/picture/juice-2.jpg" alt="Jane" />
+              <div class="container-cart">
+                <h2 class="juice">飲料</h2>
+                <h3 class="title">/橘子薄荷氣泡飲/</h3>
+
+                <h3>/$45/-</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+                <a href="#" class="add-cart cart2">加入購物車</a>
+                <input type="hidden" value="120" />
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <img src="/picture/juice-3.jpg" alt="Jane" />
+              <div class="container-cart">
+                <h2 class="juice">飲料</h2>
+                <h3 class="title">/覆盆子蔓越莓奶昔/</h3>
+
+                <h3>/$30/-</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+                <a href="#" class="add-cart cart2">加入購物車</a>
+                <input type="hidden" value="120" />
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="card">
+              <img src="/picture/cake-2.jpg" alt="Jane" />
+              <div class="container-cart">
+                <h2 class="cake">蛋糕</h2>
+                <h3 class="title">/白巧克力慕斯/</h3>
+
+                <h3>/$40/-</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+                <a href="#" class="add-cart cart2">加入購物車</a>
+                <input type="hidden" value="120" />
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <img src="/picture/cake-3.jpg" alt="Jane" />
+              <div class="container-cart">
+                <h2 class="cake">蛋糕</h2>
+                <h3 class="title">/覆盆子檸檬塔/</h3>
+
+                <h3>/$35/-</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+                <a href="#" class="add-cart cart2">加入購物車</a>
+                <input type="hidden" value="120" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
+    <script>
+      document.getElementById("defaultOpen").click();
+    </script>
   </body>
 </html>
