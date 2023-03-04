@@ -7,10 +7,10 @@ function openPage(evt, page, nums) {
   for (i = 0; i < cartbus.length; i++) {
     cartbus[i].style.display = "none";
   }
-  // carlinks = document.getElementsByClassName("siber-page");
-  // for (i = 0; i < tablinks.length; i++) {
-  //   carlinks[i].className = carlinks[i].className.replace(" active", "");
-  // }
+  carlinks = document.getElementsByClassName("siber-page");
+  for (i = 0; i < carlinks.length; i++) {
+    carlinks[i].className = carlinks[i].className.replace(" active", "");
+  }
   document.getElementById(page).style.display = "flex";
   // alert(page);
   evt.currentTarget.className += " active";

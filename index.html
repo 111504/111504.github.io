@@ -31,6 +31,8 @@
 
     <script defer src="javascript/script.js"></script>
     <script defer src="javascript/Marquee.js"></script>
+    <script defer src="javascript/LoginSystem.js"></script>
+
     <title>Omifood</title>
   </head>
   <body>
@@ -619,12 +621,13 @@
 
               <form class="cta-form" action="#">
                 <div>
-                  <label for="full-name">Full Name</label>
+                  <label for="full-name">Account</label>
                   <input
                     id="full-name"
                     type="text"
                     placeholder="John Smith"
                     required
+                    max="10"
                   />
                 </div>
 
@@ -650,7 +653,7 @@
                   </select>
                 </div>
 
-                <button class="btn btn--form">Sign up now</button>
+                <button class="btn btn-submit btn--form">Sign up now</button>
 
                 <!-- <input type="checkbox" />
                 <input type="number" /> -->
@@ -691,8 +694,7 @@
           </ul>
 
           <p class="copyright">
-            Copyright &copy; <span class="year">2027</span> by Omnifood, Inc.
-            All rights reserved.
+            Copyright &copy; <span class="year">2027</span> by che wei Hung
           </p>
         </div>
         <div class="address-col">
@@ -741,4 +743,5 @@
       </div>
     </footer>
   </body>
+  <!-- <script defer src="javascript/LoginSystem.js"></script> -->
 </html>

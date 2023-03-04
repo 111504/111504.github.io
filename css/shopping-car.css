@@ -132,7 +132,7 @@ nav li span {
   font-weight: 700;
 }
 .sidebar-top {
-  background-color: #c97214;
+  background-color: #75665699;
   font-weight: 700;
   padding: 0;
   width: 100%;
@@ -144,19 +144,19 @@ nav li span {
   text-decoration: none;
 }
 
-.sidebar button:active {
+/* .sidebar button:active {
   background-color: #293631;
   color: white;
-}
-/* .sidebar button.active {
-  background-color: #22986b;
-  color: white;
 } */
+.sidebar button.active {
+  background-color: #c97214;
+  color: white;
+}
 
-.sidebar button:hover:not(.active) {
+/* .sidebar button:hover:not(.active) {
   background-color: #000000;
   color: white;
-}
+} */
 
 /*單一食物*/
 .column {
