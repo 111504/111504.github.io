@@ -686,6 +686,17 @@
           </div>
         </div>
       </section>
+      <div class="elevator">
+        <ul class="elevator-list">
+          <li><a href="" class="moveFresh">新鮮</a></li>
+          <li><a href="">人氣</a></li>
+          <li><a href="">熱門</a></li>
+          <li><a href="">最新</a></li>
+          <li>
+            <a href="" id="backTop"><i class="sprites"></i>頂部</a>
+          </li>
+        </ul>
+      </div>
     </main>
     <footer class="footer">
       <div class="container grid grid--footer">
@@ -762,5 +773,28 @@
       </div>
     </footer>
   </body>
-  <!-- <script defer src="javascript/LoginSystem.js"></script> -->
+  <script>
+    const ele = document.querySelector(".elevator");
+    const backTop = document.querySelector("#backTop");
+    const moveFresh = document.querySelector(".moveFresh");
+    let movefresh = document.querySelector(".subheading").offsetTop;
+
+    window.addEventListener("scroll", function () {
+      const n = document.documentElement.scrollTop;
+      console.log(n);
+      if (n >= 300) {
+        ele.style.opacity = 0.8;
+      } else {
+        ele.style.opacity = 0;
+      }
+    });
+    backTop.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.scrollTo({ behavior: "smooth", top: 0 });
+    });
+    moveFresh.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.scrollTo({ behavior: "smooth", top: movefresh });
+    });
+  </script>
 </html>
