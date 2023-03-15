@@ -697,6 +697,7 @@
           </li>
         </ul>
       </div>
+      <button onclick="getData();">連線資料</button>
     </main>
     <footer class="footer">
       <div class="container grid grid--footer">
@@ -796,5 +797,15 @@
       e.preventDefault();
       window.scrollTo({ behavior: "smooth", top: movefresh });
     });
+
+    function getData() {
+      fetch("https://111504.github.io/data/products.json")
+        .then(function (reponse) {
+          return reponse.json();
+        })
+        .then(function (data) {
+          console.log(data);
+        });
+    }
   </script>
 </html>
