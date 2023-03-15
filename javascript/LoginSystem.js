@@ -30,7 +30,7 @@ passwordInput.addEventListener("input", function (event) {
   } else {
     rule3.style.display = "block";
   }
-  if (inputValue.match(/[A-Z\d]/g)) {
+  if (inputValue.match(/[A-Z]/g)) {
     rule4.style.display = "none";
   } else {
     rule4.style.display = "block";
