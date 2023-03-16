@@ -29,7 +29,7 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script defer src="javascript/script.js"></script>
     <script defer src="javascript/Marquee.js"></script>
     <script defer src="javascript/LoginSystem.js"></script>
@@ -697,7 +697,6 @@
           </li>
         </ul>
       </div>
-      <button onclick="getData();">連線資料</button>
     </main>
     <footer class="footer">
       <div class="container grid grid--footer">
@@ -797,15 +796,5 @@
       e.preventDefault();
       window.scrollTo({ behavior: "smooth", top: movefresh });
     });
-
-    function getData() {
-      fetch("https://111504.github.io/data/products.json")
-        .then(function (reponse) {
-          return reponse.json();
-        })
-        .then(function (data) {
-          console.log(data);
-        });
-    }
   </script>
 </html>
