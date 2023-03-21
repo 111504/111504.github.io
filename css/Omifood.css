@@ -556,7 +556,9 @@ strong {
   outline: none;
   box-shadow: 0 0 0 0.8rem rgba(233, 233, 253, 0.74);
 }
-
+/* .btn-submit {
+  margin-bottom: 70px;
+} */
 /**************************/
 /* FOOTER */
 /**************************/
